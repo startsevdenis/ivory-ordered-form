@@ -26,4 +26,11 @@ class OrderedFormExtension extends AbstractOrderedExtension
     {
         return method_exists(AbstractType::class, 'getBlockPrefix') ? FormType::class : 'form';
     }
+
+    public static function getExtendedTypes()
+    {
+        return [
+            method_exists(AbstractType::class, 'getBlockPrefix') ? FormType::class : 'form'
+        ];
+    }
 }

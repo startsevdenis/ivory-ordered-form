@@ -27,4 +27,11 @@ class OrderedButtonExtension extends AbstractOrderedExtension
     {
         return method_exists(AbstractType::class, 'getBlockPrefix') ? ButtonType::class : 'button';
     }
+
+    public static function getExtendedTypes()
+    {
+        return [
+            method_exists(AbstractType::class, 'getBlockPrefix') ? ButtonType::class : 'button'
+        ];
+    }
 }
